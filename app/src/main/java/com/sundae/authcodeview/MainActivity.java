@@ -16,9 +16,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         authCodeView = (AuthCodeView) findViewById(R.id.authcode);
-        authCodeView.setmEtNumber(5)
-                .setMarginTop(120)
-                .build();
 
         authCodeView.setAuthCodeTextChangeListener(new AuthCodeView.AuthCodeTextChangeListener() {
             @Override
