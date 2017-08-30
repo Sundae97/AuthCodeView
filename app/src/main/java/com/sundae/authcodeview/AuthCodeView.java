@@ -93,7 +93,9 @@ public class AuthCodeView extends RelativeLayout {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        build();
+        initTextViews(mContext , mEtNumber , mEtWidth , mEtDividerDrawable , mEtTextSize , mEtTextColor);
+        initEtContainer();
+        setListener();
     }
 
     private void initTextViews(Context context, int etNumber, int etWidth, Drawable etDividerDrawable, float etTextSize, int etTextColor) {
@@ -242,68 +244,11 @@ public class AuthCodeView extends RelativeLayout {
         return s.trim();
     }
 
-    public AuthCodeView setmEtNumber(int mEtNumber) {
-        this.mEtNumber = mEtNumber;
-        return AuthCodeView.this;
-    }
-
-    public AuthCodeView setmEtTextSize(int mEtTextSize) {
-        this.mEtTextSize = mEtTextSize;
-        return AuthCodeView.this;
-    }
-
-    public AuthCodeView setmEtTextColor(int mEtTextColor) {
-        this.mEtTextColor = mEtTextColor;
-        return AuthCodeView.this;
-    }
-
-    public AuthCodeView setMarginLeft(int marginLeft) {
-        this.marginLeft = marginLeft;
-        return AuthCodeView.this;
-    }
-
-    public AuthCodeView setMarginRight(int marginRight) {
-        this.marginRight = marginRight;
-        return AuthCodeView.this;
-    }
-
-    public AuthCodeView setMarginTop(int marginTop) {
-        this.marginTop = marginTop;
-        return AuthCodeView.this;
-    }
-
-    public AuthCodeView setMarginBottom(int marginBottom) {
-        this.marginBottom = marginBottom;
-        return AuthCodeView.this;
-    }
-
-    public AuthCodeView setmEtDividerDrawable(Drawable mEtDividerDrawable) {
-        this.mEtDividerDrawable = mEtDividerDrawable;
-        return AuthCodeView.this;
-    }
-
-    public AuthCodeView setmEtBackgroundDrawableFocus(Drawable mEtBackgroundDrawableFocus) {
-        this.mEtBackgroundDrawableFocus = mEtBackgroundDrawableFocus;
-        return AuthCodeView.this;
-    }
-
-    public AuthCodeView setmEtBackgroundDrawableNormal(Drawable mEtBackgroundDrawableNormal) {
-        this.mEtBackgroundDrawableNormal = mEtBackgroundDrawableNormal;
-        return AuthCodeView.this;
-    }
-
-    public AuthCodeView setAuthCodeTextChangeListener(AuthCodeTextChangeListener authCodeTextChangeListener)
+    public void setAuthCodeTextChangeListener(AuthCodeTextChangeListener authCodeTextChangeListener)
     {
         this.authCodeTextChangeListener = authCodeTextChangeListener;
-        return AuthCodeView.this;
     }
 
-    public void build()
-    {
-        initTextViews(mContext , mEtNumber , mEtWidth , mEtDividerDrawable , mEtTextSize , mEtTextColor);
-        initEtContainer();
-        setListener();
-    }
 
     public interface AuthCodeTextChangeListener
     {
