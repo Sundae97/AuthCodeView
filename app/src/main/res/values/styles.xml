@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- 自定义验证码输入框-->
+    <declare-styleable name="AuthCodeView">
+        <!--输入框的数量-->
+        <attr name="edit_number" format="integer" />
+        <!--输入框的宽度-->
+        <attr name="edit_width" format="dimension|reference" />
+        <!--输入框之间的分割线-->
+        <attr name="edit_divider_drawable" format="reference" />
+        <!--输入框文字颜色-->
+        <attr name="edit_text_color" format="color|reference" />
+        <!--输入框文字大小-->
+        <attr name="edit_text_size" format="dimension|reference" />
+        <!--输入框获取焦点时边框-->
+        <attr name="edit_bg_focus" format="reference" />
+        <!--输入框没有焦点时边框-->
+        <attr name="edit_bg_normal" format="reference" />
+
+        <!--输入框外边距-->
+        <attr name="edit_marginLeft" format="dimension|reference"/>
+        <attr name="edit_marginTop" format="dimension|reference"/>
+        <attr name="edit_marginRight" format="dimension|reference"/>
+        <attr name="edit_marginBottom" format="dimension|reference"/>
+        <!-- _________________ -->
+
+    </declare-styleable>
+
+</resources>
